@@ -31,6 +31,17 @@ $ pip install -r requirements.txt
 
 ________________________________________________________________________
 
+### Run the application ###
+
+Development mode
+
+```
+$ export FLASK_APP=flaskr
+$ export FLASK_ENV=development
+$ flask run
+```
+________________________________________________________________________
+
 #### Used libraries and frameworks: ####
 * Flask==1.0.2
 * Click==7.0
