@@ -2,6 +2,8 @@ import os
 
 from flask import Flask
 
+from . import db, auth
+
 
 def create_app(test_config=None):
     """Application factory function that creates and configures the app."""
@@ -28,7 +30,8 @@ def create_app(test_config=None):
     def hello():
         return 'Hello world!'
 
-    from flaskr import db
     db.init_app(app)  # register db commands
+
+    app.register_blueprint(auth.bp)  # register blueprint
 
     return app
