@@ -31,6 +31,13 @@ $ pip install -r requirements.txt
 
 ________________________________________________________________________
 
+### Initialize the db file ###
+
+```
+$ flask init-db
+```
+________________________________________________________________________
+
 ### Run the application ###
 
 Development mode
