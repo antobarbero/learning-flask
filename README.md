@@ -29,6 +29,12 @@ $ pip install -r requirements.txt
 
 ```
 
+or install the project in development mode
+
+```
+$ pip install -e .
+```
+
 ________________________________________________________________________
 
 ### Initialize the db file ###
