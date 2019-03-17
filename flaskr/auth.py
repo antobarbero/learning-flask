@@ -21,7 +21,7 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 # Associates the url with the view function. When Flask receives a request to
 # /auth/register it will call the register view and use the return value as
 # the response.
-@bp.route('/register', method=('GET', 'POST'))
+@bp.route('/register', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':
         username = request.form['username']
@@ -81,7 +81,7 @@ def login():
 
 
 # This function that runs before the view function for any requested URL.
-@bp.after_app_request
+@bp.before_app_request
 def load_logged_in_user():
     user_id = session.get('user_id')
 
