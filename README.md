@@ -55,6 +55,20 @@ $ flask run
 ```
 ________________________________________________________________________
 
+### How to run tests ###
+
+```
+$ pytest
+```
+
+To measure the code coverage
+
+```
+$ coverage run -m pytest
+$ coverage report
+```
+________________________________________________________________________
+
 #### Used libraries and frameworks: ####
 * Flask==1.0.2
 * Click==7.0
@@ -65,4 +79,3 @@ ________________________________________________________________________
 * pkg-resources==0.0.0
 * Werkzeug==0.14.1
 * pytest==4.3.1
-
