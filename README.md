@@ -69,6 +69,40 @@ $ coverage report
 ```
 ________________________________________________________________________
 
+### Build and install ###
+
+Build a wheel distribution file
+```
+$ python setup.py bdist_wheel
+```
+
+
+To install
+
+1 . Setup a virtual environment and install the built file using pip
+```
+$ pip install flaskr-1.0.0-py3-none-any.whl
+```
+Pip will install your project along with its dependencies.
+
+2 . Run init-db to create the database in the instance folder.
+
+```
+$ export FLASK_APP=flaskr
+$ flask init-db
+```
+
+3 . Configure the Secret Key.
+
+Create the config.py file in the instance folder, which the factory will read from if it exists.
+
+venv/var/flaskr-instance/config.py
+```
+SECRET_KEY = b'secretkey'
+```
+
+________________________________________________________________________
+
 #### Used libraries and frameworks: ####
 * Flask==1.0.2
 * Click==7.0
@@ -79,3 +113,4 @@ ________________________________________________________________________
 * pkg-resources==0.0.0
 * Werkzeug==0.14.1
 * pytest==4.3.1
+* wheel==0.33.1
